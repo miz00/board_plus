@@ -11,9 +11,9 @@
         <% @my_threads.each do |my_thread| %>
         <tr>
             <td><%= my_thread.title %></td>
-            <td><%= link_to 'show', my_threads_path(id)%></td>
-            <td><%= link_to 'edit', edit_my_thread_path(id)%></td>
-            <td><%= link_to 'destroy', my_thread_path(id), method: :delete, data: { confirm: "Are you sure?" } %></td>
+            <td><%= link_to 'show', my_thread_path(my_thread)%></td>
+            <td><%= link_to 'edit', edit_my_thread_path(my_thread)%></td>
+            <td><%= link_to 'destroy', my_thread_path(my_thread), method: :delete, data: { confirm: "Are you sure?" } %></td>
         </tr>
         <% end %>
     </tbody>
